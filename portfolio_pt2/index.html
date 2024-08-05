@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H2HVWSN0D5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-H2HVWSN0D5');
+  </script>
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <title>Chris Gayle Portolio</title>
+</head>
+
+<body>
+    
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" id="closePopup">&times;</span>
+        <p>Warning: This website is not optimized for mobile devices. You may experience issues with the layout and functionality.</p>
+    </div>
+</div>
+    
+    <div class="container">
+      <!-- <div id="navbar">
+        <a href="/" id="navbar-logo">
+            <img src="./assets/profile_smile.jpeg" alt="Logo" style="height: 50px;"> 
+        </a>
+        <nav id="navbar-links">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div> -->
+    <div style="display: flex; justify-content: center; ">
+    <button class="button-theme" data-text="Awesome">
+      <span class="actual-text">&nbsp;Theme&nbsp;</span>
+      <span aria-hidden="true" class="hover-theme-text">&nbsp;Theme&nbsp;</span>
+  </button>
+</div>
+    <div id="theme-selector" style="text-align: center; padding: 2px 0; margin-bottom: 0;">
+      <!-- <button onclick="applyTheme('dark')">Dark Theme</button>
+      <button onclick="applyTheme('light')">Light Theme</button>
+      <button onclick="applyTheme('b')">b Theme</button>
+      <button onclick="applyTheme('c')">c Theme</button> -->
+      <div class="theme-circle" style="background-color: #141414;" onclick="applyTheme('purp')"></div>
+      <div class="theme-circle" style="background-color: #eae0d5;" onclick="applyTheme('light')"></div>
+      <div class="theme-circle" style="background-color: #0f172a;" onclick="applyTheme('dark')"></div>
+      <div class="theme-circle" style="background-color: #b8dbd9;" onclick="applyTheme('b')"></div>
+      <div class="theme-circle" style="background-color: #22223B;" onclick="applyTheme('spacecadet')"></div>
+      <div class="theme-circle" style="background-color: #9FBCA5;" onclick="applyTheme('c')"></div>
+      <!-- <div class="theme-circle" style="background-color: #D3CEC5;" onclick="applyTheme('d')"></div> -->
+
+      <div class="theme-circle" style="background-color: #083F49;" onclick="applyTheme('midnightgreen')"></div>
+
+      <!-- <div class="theme-circle" style="background-color: #000000;" onclick="applyTheme('blackred')"></div> -->
+      <!-- <div class="theme-circle" style="background-color: #2f4454" onclick="applyTheme('futuregray')"></div> -->
+      <!-- <div class="theme-circle" style="background-color: #000000" onclick="applyTheme('hacker')"></div> -->
+
+      <div class="theme-circle" style="background-color: #EAE7DC;" onclick="applyTheme('minimalwarm')"></div>
+
+
+    </div>
+    
+
+
+    <div class="two-column-row">
+
+                <!-- Left side content -->
+        <div class="left">
+                    <h1 class="dm-serif-display-regular" style="font-size: 50px; margin-bottom: 0em;">Christopher Gayle</h1>
+                    <h3 class="dm-sans-light" style="font-size: 22px; margin-top: -.2em; margin-bottom: 0.35em;">Software Engineer</h3>
+                    <h4 class="dm-sans-extralight" style="font-size: 17px; margin-top: 0em; margin-bottom: 0em;">I find innovative solutions with meticulous attention to detail,</h4>
+                    <h4 class="dm-sans-extralight" style="font-size: 17px; margin-top: 0em; margin-bottom: 0em;">transforming challenging ideas into realities. Basically, </h4>
+                    <h4 class="dm-sans-extralight" style="font-size: 17px; margin-top: 0em; margin-bottom: 0em;">I love to build cool stuff!</h4>
+
+                    <!-- <img src="./assets/profile_smile.jpeg" alt="Swiss Alps Profile Smile!" class="profile-image-smile"> -->
+                    <div class="p-image-container">
+                      <img src="./assets/profile.jpeg" alt="Swiss Alps Profile!" class="profile-image">
+                      <img src="./assets/profile_smile.jpeg" alt="cheeeeesssseee!" class="overlay-image">
+                    </div>
+                    <img src="./assets/profile.jpeg" alt="Swiss Alps Profile!" class="profile-image-invisible">
+
+                    <ul class="soc">
+
+                        <li><a href="mailto:chrisgayle@utexas.edu" class="icon email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+                                            
+                        <li><a href="resume.html" target="_blank" class="icon small-icon" title="Resume">
+                          <svg viewBox="0 0 24 24" height="75%" fill="none" style="display: block;">
+                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 3v4a1 1 0 0 1-1 1H5m4 8h6m-6-4h6m4-8v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7.914a1 1 0 0 1 .293-.707l3.914-3.914A1 1 0 0 1 9.914 3H18 a1 1 0 0 1 1 1Z"/>
+                          </svg>
+                      </a></li>
+                      
+                        <!--[if lt IE 9]><em>Instagram</em><![endif]--></a></li>
+                        
+                        <li><a href="https://github.com/cjgayle1" target="_blank" class="icon github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+                      
+                      
+                        <li><a href="https://www.linkedin.com/in/christopher-gayle/" target="_blank" class="icon linkedin" title="LinkedIn"><svg viewBox="0 0 512 512"><path d="M186.4 142.4c0 19-15.3 34.5-34.2 34.5 -18.9 0-34.2-15.4-34.2-34.5 0-19 15.3-34.5 34.2-34.5C171.1 107.9 186.4 123.4 186.4 142.4zM181.4 201.3h-57.8V388.1h57.8V201.3zM273.8 201.3h-55.4V388.1h55.4c0 0 0-69.3 0-98 0-26.3 12.1-41.9 35.2-41.9 21.3 0 31.5 15 31.5 41.9 0 26.9 0 98 0 98h57.5c0 0 0-68.2 0-118.3 0-50-28.3-74.2-68-74.2 -39.6 0-56.3 30.9-56.3 30.9v-25.2H273.8z"/></svg><!--[if lt IE 9]><
+                      >LinkedIn</em><![endif]--></a></li>
+                      
+                      </ul>
+                </div>
+              
+        <!-- Right side content -->
+        <div class="right">
+        <main>
+            <section id="about">
+              <p>I'm studying <span class="highlight">business</span> and<span class="highlight"> computer science</span> at the University of Texas at Austin, graduating in <span class="highlight">May 2025</span>. My journey into the world of coding began in high school, sparking a passion that has since seen me building exciting projects. Most of my projects are centered around my proficiency in<span class="highlight"> Python</span> and various libraries, however, I am constantly expanding my technical repertoire, just as I had to do to create this website!</p>
+              <p>By day (and sometimes by night), I'm a<span class="highlight"> Cloud Engineering Intern at Fidelity</span>, working with various<span class="highlight"> AWS products</span>. My work doesn't stop at cloud technologies; I'm also versed in<span class="highlight"> artificial intelligence</span> and<span class="highlight"> data analytics</span>, pushing the boundaries of what's possible and aiming to <span class="highlight">create effecient, impactful solutions</span>.</p>
+              <p>When I'm not coding, I'm all about <span class="highlight">movement</span> and<span class="highlight"> exploration</span>. I love hiking, climbing, shooting hoops, and virtually anything active. I also love to <span class="highlight">travel</span> and am constantly seeking to improve my <span class="highlight">Spanish</span>! To chill, I lose myself in a good <span class="highlight">book</span> or take some time for <span class="highlight">meditation</span>. </p>
+
+              <!-- Although I am certainly no professional, I like to create art in many different mediums. Check it out <span class="highlight"><a href="art.html" class="default-link">here!</a></span> -->
+
+            </section>
+  
+            <section id="experience">
+
+              <h1 style="font-size: 35px; margin-top: 1.5em; margin-bottom: .5em;">Experience</h1>
+              <div class="blur-container">
+                <div class="card2">
+                    <div class="date-position-container">
+                      <div class="date-exp">June 2024 — Present</div>
+                      <div>
+                        <div class="company-name" style="display: inline">Fidelity • </div><div class="position-exp" style="display: inline">Software Engineering Intern</div>
+                    </div>                  </div>
+                  <div class="description-exp" style="margin-bottom: 0em">
+                    Designed and implemented a dynamic Jenkins pipeline to automate scaling operations for Kubernetes deployments, ensuring efficient resource utilization and consistent performance across multiple namespaces and regions. This streamlined deployment processes, reduced manual intervention, and contributed to the overall reliability and performance of our cloud infrastructure.
+                  
+                  </div>
+                    <ul class="tag">
+                      <li class="tag__name">AWS</li>
+                      <li class="tag__name">Jenkins</li>
+  
+                            <li class="tag__name">Groovy</li>
+                
+                      <li class="tag__name">Kubernetes</li>                  
+              
+                  </div>
+                  <div class="card2">
+                    <div class="date-position-container">
+                      <div class="date-exp">October 2023 — February 2024</div>
+                      <div>
+                          <div class="company-name" style="display: inline">Capitol AI • </div><div class="position-exp" style="display: inline">Company Ambassador</div>
+                      </div>
+                  </div>
+                  <!-- <div class="company-name">Fidelity</div> -->
+                  <div class="description-exp">
+                    As a Company Ambassador at Capitol AI, I used both technical knowledge and marketing, leading events and crowdsourcing efforts, driving a 1000% user growth to over 5000 new users. My role focused on promoting our LLM’s educational tools, including article responses and slideshows, highlighting the intersection of technology and business.                  </div>
+                  
+                    <ul class="tag">
+                      <li class="tag__name">Marketing</li>
+                            <li class="tag__name">LLM</li>
+                
+                      <li class="tag__name">Startup</li>
+                
+                  </div>
+                <div class="card2">
+                  <div class="date-position-container">
+                    <div class="date-exp">June 2023 — August 2023</div>
+                    <div>
+                        <div class="company-name" style="display: inline">Fidelity • </div><div class="position-exp" style="display: inline">Software Engineering Intern</div>
+                    </div>
+                </div>
+                <!-- <div class="company-name">Fidelity</div> -->
+                <div class="description-exp">
+
+                  Revamped Lambda functions using DynamoDB to extract and report Key Performance Indicators (KPIs) through SharePoint, enhancing application performance insights. Expanded SodaMap functions to capture data from an additional load balancer, doubling available metrics for analysis. Specialized in DynamoDB and Lambda through 30+ hours of AWS coursework in an agile development environment.</div>
+                
+                  <ul class="tag">
+                    <li class="tag__name">AWS</li>
+                    <li class="tag__name">Lambda</li>
+
+                          <li class="tag__name">DynamoDB</li>
+              
+                    <li class="tag__name">ReKognition</li>
+                    <li class="tag__name">Agile</li>
+
+              
+                </div>
+
+                <div class="card2">
+                  <div class="date-position-container">
+                    <div class="date-exp">September 2022 — August 2023</div>
+                    <div>
+                        <div class="company-name" style="display: inline">Technology Consulting Group • </div><div class="position-exp" style="display: inline">Technical Consultant</div>
+                    </div>
+                </div>
+                <!-- <div class="company-name">Fidelity</div> -->
+                <div class="description-exp">
+                  Spearheaded the CRM platform's implementation for an email marketing campaign, achieving a 200% boost in customer outreach. I also led thorough keyword research and analysis, pinpointing valuable keywords for SEO enhancement.                  </div>
+                
+                  <ul class="tag">
+                    <li class="tag__name">CRM</li>
+                          <li class="tag__name">SEO</li>
+                          
+                          
+                          <li class="tag__name">Airtable</li>
+                          <li class="tag__name">startup</li>
+              
+                </div>
+                  <div class="card2">
+                    <div class="date-position-container">
+                      <div class="date-exp">September 2022 — May 2023</div>
+                      <div>
+                          <div class="company-name" style="display: inline">Gravitational Ventures • </div><div class="position-exp" style="display: inline">Data Analyst Intern</div>
+                      </div>
+                  </div>
+                  <!-- <div class="company-name">Fidelity</div> -->
+                  <div class="description-exp">
+                    Leveraging Airbnb data, I crafted and modeled insightful dashboards, predicting future high-performing properties and shaping investment strategies. By refining and executing financial models, I forecasted Airbnb performance metrics, including revenue, expenses, and cash flow, grounded in data analysis.                  </div>
+                  
+                    <ul class="tag">
+                      <li class="tag__name">financial models</li>
+                            <li class="tag__name">predictive analytics</li>
+                
+                      <li class="tag__name">airtable</li>
+                
+                  </div>
+
+                  <div class="card2">
+                    <div class="date-position-container">
+                      <div class="date-exp">May 2021 — August 2021</div>
+                      <div>
+                          <div class="company-name" style="display: inline">Stratium Consulting Group • </div><div class="position-exp" style="display: inline">Cloud Development Intern</div>
+                      </div>
+                  </div>
+                  <!-- <div class="company-name">Fidelity</div> -->
+                  <div class="description-exp">
+                    Crafted APIs for Deloitte's "DocuEdge" on Microsoft Azure with Django REST framework and Azure Blob Storage, streamlining the classification and storage of unstructured enterprise data, saving clients an estimated $5+ million annually. Also, deployed cloud document management solutions in Azure Storage utilizing Python and Docker.                  </div>
+                  
+                    <ul class="tag">
+                      <li class="tag__name">API</li>
+                            <li class="tag__name">Django</li>
+                
+                      <li class="tag__name">Azure</li>
+                      <li class="tag__name">Docker</li>
+                      
+
+                
+                  </div>
+            
+            </div>
+            </section>
+          </main>
+        <!-- Right side content such as images or additional information will go here -->
+        <!-- Placeholder for image or additional content -->
+        <div style="text-align:right">
+        <a href="resume.html" target="_blank" class="resume-text">View My Full Resume →</a>
+    </div>
+        <h1>Skills</h1>
+        <p>With a foundation in <span class="highlight">Python</span> and its various <span class="highlight">frameworks</span>, my technical knowledge includes <span class="highlight">cloud computing</span>, <span class="highlight">data science</span> and <span class="highlight">artificial intelligence</span>. Beyond these technical abilities, I hold the <span class="highlight">Azure Fundamentals Certification</span>, affirming my competence as a certified <span class="highlight">cloud engineer</span>. This unique blend of skills not only demonstrates my capability to <span class="highlight">navigate</span> and <span class="highlight">innovate</span> within the tech landscape but also underscores my commitment to continual<span class="highlight"> professional growth.</span> I am confident in my ability to quickly pick up any new framework or technology as needed.</p>
+        <p> </p>
+        <p style="color: var(--primary-text-color);">Certifications: Azure Fundamentals (AZ-900), Intro to Renewable Energy (RE100)</p>
+        <!-- <div class="skill-container"> -->
+          <ul class="skills-bar-container">
+            <label>Python</label>
+            <span class="percent" id="html-pourcent"></span>
+            <li>
+              <span class="progressbar progressred" id="progress-python"></span>
+            </li>
+          
+            <label>AWS</label>
+            <span class="percent" id="aws-pourcent"></span>
+            <li>
+              <span class="progressbar progressblue" id="progress-aws"></span>
+            </li>
+          
+            <label>Azure</label>
+            <span class="percent" id="azure-pourcent"></span>
+            <li>
+              <span class="progressbar progresspurple" id="progress-azure"></span>
+            </li>
+            
+            <label>HTML / CSS / JS</label>
+            <span class="percent" id="html-pourcent"></span>
+            <li>
+              <span class="progressbar progressgreen" id="progress-html"></span>
+            </li>
+          
+            <label>Java</label>
+            <span class="percent" id="java-pourcent"></span>
+            <li>
+              <span class="progressbar progressorange" id="progress-java"></span>
+            </li>
+          
+          </ul>
+        </div>
+      <!-- </div> -->
+
+    </div>
+        <h1 class="header-container" style="font-size: 2.7rem;" id="projects">My Work</h1>
+        <p class="header-container" style="margin-top: 1em; margin-bottom: 3em; width: 38%; text-align: center;">Here are some projects that I am very proud of completing! These projects demonstrate my abilities in my 3 main focus areas: Cloud Computing, Data Science, and AI.</p>
+
+    <div class="blog-card">
+        <div class="meta-blog">
+          <div class="photo-blog" style="background-image: url(assets/website.webp)"></div>
+          <ul class="details-blog">
+            <li class="author-blog"><a href="#">John Doe</a></li>
+            <li class="date-blog">April 2024</li>
+            <li class="tags-blog">
+              <ul>
+                <li><a href="#">Learn</a></li>
+                <li><a href="#">Code</a></li>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="description-blog">
+          <h1>Cloud-Based Automated Website Monitoring System (In-Progress)</h1>
+          <h2>Alerts and Analytics: Visualized Web Watchdog</h2>
+          <p>
+            The Automated Website Monitoring System is cloud-based solution designed to ensure the continuous operational integrity of web services. Utilizing AWS Lambda, this system periodically pings a designated website, logging response times and availability data in a DynamoDB table. Integrated with Amazon CloudWatch for seamless scheduling and monitoring, the system also employs Amazon SNS for instant alerting, notifying stakeholders via email when the website does not respond as expected.</p>
+          <p class="read-more";>
+            <a class="check" href="dashboard.html">Check it out!</a>
+            <a href="https://github.com/cjgayle1" target="_blank" class="icon github" title="GitHub"><svg viewBox="0 0 512 512" width="40" height="40"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a>
+
+          </p>
+        </div>
+      </div>
+    <div class="blog-card alt">
+        <div class="meta-blog">
+          <div class="photo-blog" style="background-image: url(assets/climate.jpeg)"></div>
+          <ul class="details-blog">
+            <li class="author-blog"><a href="#">Jane Doe</a></li>
+            <li class="date-blog">July. 15, 2015</li>
+            <li class="tags-blog">
+              <ul>
+                <li><a href="#">AWS Lambda</a></li>
+                <li><a href="#">Google Analytics</a></li>
+                <li><a href="#">Python</a></li>
+                <li><a href="#">AWS DynamoDB</a></li>
+                <li><a href="#">JavaScript</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="description-blog">
+          <h1>Temperature and Water Availability Predictor (In-Progress)</h1>
+          <h2>Navigating Climate Futures with Data-Driven Maps and Analytics</h2>
+          <p>
+
+            Developed an interactive dashboard that presents comprehensive metrics on future temperatures and water availability, utilizing data sourced from the Microsoft Planetary Computer. This tool primarily features a dynamic heatmap, offering users a visual representation of projected climate changes over time. The dashboard aids in understanding complex environmental data, enabling stakeholders to make informed decisions regarding resource management and sustainability efforts. This project underscores the potential of combining advanced computing with environmental science to address pressing global challenges.         
+            <p class="read-more";>
+              <a class="check" href="error.html">Check it out!</a>
+              <a href="https://github.com/cjgayle1" target="_blank" class="icon github" title="GitHub"><svg viewBox="0 0 512 512" width="40" height="40"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a>
+  
+            </p>
+        </div>
+      </div>
+    <div class="blog-card" href="https://recipefinder.christopher-gayle.com" target="_blank">
+        <div class="meta-blog">
+          <div class="photo-blog" style="background-image: url(assets/recipe.jpg)"></div>
+          <ul class="details-blog">
+            <li class="author-blog"><a href="#">AI / Data Science</a></li>
+            <li class="date-blog">April, 2024</li>
+            <li class="tags-blog">
+              <ul>
+                <li><a href="#">TFIDF</a></li>
+                <li><a href="#">Lemmetization</a></li>
+                <li><a href="#">NLTK</a></li>
+                <li><a href="#">Pandas</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="description-blog">
+          <h1>AI Recipe Finder</h1>
+          <h2>Put in ingredients, get out recipes</h2>
+          <p> 
+            Inspired by the challenge of deciding what to cook with on-hand ingredients, I developed a program that suggests recipes based on what users have available. It uses a multi-step process to normalize ingredient data including lemmatization with NLTK and matches recipes by comparing TFIDF-scored vectors and cosine similarities of recipe ingredients against that of the user ingredients. The program will then provide a set number of results that match the users inputs. A user-friendly UI makes it easy for anyone to navigate and discover new meal possibilities.        
+            <p class="read-more">
+              <a class="check" target="_blank" href="https://ai-recipe-finder-18770c56cf59.herokuapp.com/">Check it out!</a>
+              <a href="https://github.com/cjgayle1" target="_blank" class="icon github" title="GitHub"><svg viewBox="0 0 512 512" width="40" height="40"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a>
+  
+            </p>
+        </div>
+      </div>
+
+      <!-- <div class="blog-card alt">
+        <div class="meta-blog">
+          <div class="photo-blog" style="background-image: url(assets/finance.png)"></div>
+          <ul class="details-blog">
+            <li class="author-blog"><a href="#">Jane Doe</a></li>
+            <li class="date-blog">July. 15, 2015</li>
+            <li class="tags-blog">
+              <ul>
+                <li><a href="#">Learn</a></li>
+                <li><a href="#">Code</a></li>
+                <li><a href="#">JavaScript</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="description-blog">
+          <h1>Financial Dashboard maybe</h1>
+          <h2>Java is not the same as JavaScript</h2>
+          <p>
+            Designed a comprehensive dashboard program that aggregates and displays real-time data on cryptocurrency and stock investments. This intuitive tool provides users with an overview of their portfolio's performance and delivers personalized notifications about relevant market trends. By integrating up-to-date financial data feeds, the program helps investors make informed decisions by highlighting significant market movements and potential investment opportunities.</p>
+          <p class="read-more">
+            <a href="#">Read More</a>
+          </p>
+        </div>
+      </div> -->
+
+
+      <h1 class="header-container" style="font-size: 2.7rem;">More Projects</h1>
+      <p class="header-container" style="margin-top: .5em; width: 38%; text-align: center;">Click on the card to view the Github for each project.</p>
+
+      <!-- <p class="header-container" style="margin-top: 1em; margin-bottom: 3em;">view archive here</p> -->
+
+    <div class="project-card-grid">
+      <div class="project-card">
+        <div class="project-content">
+          <a href="#">
+            <header>
+              <span>Frontend Development</span>
+              <h2>Portfolio Website</h2>
+            </header>
+            <section>
+              <p>
+              Built website to display my experience, skills, and projects. This website was built using HTML, CSS, and JavaScript. 
+</p>
+            </section>
+          </a>
+          <div class="project-tags">
+            <p>HTML</p>
+            <p>CSS</p>
+            <p>JS</p>
+
+          </div>
+        </div>
+  
+      </div>
+      <div class="project-card">
+        <div class="project-content">
+          <a href="./absurdtrolleyproblemshome.html">
+            <header>
+              <span>Frontend Development</span>
+              <h2>Absurd Trolley Problems</h2>
+            </header>
+            <section>
+              <p>
+              Game to test a players moral decision making and is purely for fun. Players are presented with absurd trolley problems and must choose the best course of action. This game was built using HTML, CSS, and JavaScript. 
+</p>
+            </section>
+          </a>
+          <div class="project-tags">
+            <p>HTML</p>
+            <p>CSS</p>
+            <p>JS</p>
+
+          </div>
+        </div>
+  
+      </div>
+      <div class="project-card">
+          <div class="project-content">
+            <a href="#">
+              <header>
+                <span>AI / Cloud Computing</span>
+                <h2>AI PPE Compliance Monitor</h2>
+              </header>
+              <section>
+                <p>
+                  Amazon Rekognition based AI model designed to detect safety gear compliance monitoring in images of construction sites.</p>
+              </section>
+            </a>
+            <div class="project-tags">
+              <p>ReKognition</p>
+              <p>S3</p>
+            </div>
+          </div>
+    
+        </div>
+        <div class="project-card">
+          <div class="project-content">
+            <a href="https://github.com/cjgayle1/ImageToASCII" target=”_blank”>
+              <header>
+                <span>AI / Data Science</span>
+                <h2>ImageToASCII</h2>
+              </header>
+              <section>
+                <p>
+                Converts images into ASCII art, using imageio, NumPy, and OpenCV. It resizes images, calculates pixel brightness, and maps pixels to ASCII characters.</p>
+              </section>
+            </a>
+            <div class="project-tags">
+              <p>Python</p>
+              <p>ImageIO</p>
+              <p>NumPy</p>
+              <p>OpenCV</p>
+
+            </div>
+          </div>
+        </div>
+          <div class="project-card">
+              <div class="project-content">
+                <a href="https://github.com/cjgayle1/ImageFilter" target=”_blank”>
+                  <header>
+                    <span>AI / Data Science</span>
+                    <h2>ImageFilter</h2>
+                  </header>
+                  <section>
+                    <p>
+                      This Python tool applies filters to images using NumPy and KMeans clustering from sklearn. Users select a filter, and the program adjusts the image's colors accordingly.</p>
+                  </section>
+                </a>
+                <div class="project-tags">
+                  <p>Python</p>
+                  <p>NumPy</p>
+                  <p>SciKitLearn</p>
+
+                </div>
+              </div>
+        
+            </div>
+            <div class="project-card">
+              <div class="project-content">
+                <a href="https://github.com/cjgayle1/ImageFilter" target=”_blank”>
+                  <header>
+                    <span>Coursework</span>
+                    <h2>Student Recruiting Website</h2>
+                  </header>
+                  <section>
+                    <p>
+                      This project for MIS 333K involved building out a fully functional job searching platform for students. This included all authentication and different roles for recruiters, companies, students, etc..</p>
+                  </section>
+                </a>
+                <div class="project-tags">
+                  <p>C#</p>
+                  <p>HTML</p>
+                  <p>CSS</p>
+
+                </div>
+              </div>
+        
+            </div>
+            <div class="project-card">
+                <div class="project-content">
+                  <a href="https://github.com/cjgayle1/Fall-2022-Class-Projects" target="_blank">
+                    <header>
+                      <span>Coursework</span>
+                      <h2>CS313E Algorithms and Datastructures</h2>
+                    </header>
+                    <section>
+                      <p>
+                        The work for my CS313E algorithms and data structures class. This includes most of the labs, homeworks, and projects that I completed throughout the semester.
+                      </p>
+                    </section>
+                  </a>
+                  <div class="project-tags">
+                    <p>Python</p>
+                    <p>Git</p>
+                  </div>
+                  
+                </div>
+          
+              </div>
+    
+        </div>
+  
+  
+    <div class="cta" id="contact">
+        <h1>Let's Connect!</h1>
+        <p style="margin-bottom: 4rem;">Have a question or comment, or just want to say hello? My inbox is always open go ahead!</p>
+        <a target="_blank" href="mailto:chrisgayle@utexas.edu"><button class="button-glow"> Contact Me
+        </button></a>
+        <ul class="soc">
+
+          <li><a href="mailto:chrisgayle@utexas.edu" class="icon email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+                              
+          <li><a href="resume.html" target="_blank" class="icon small-icon" title="Instagram">
+            <svg viewBox="0 0 24 24" height="75%" fill="none" style="display: block;">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 3v4a1 1 0 0 1-1 1H5m4 8h6m-6-4h6m4-8v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7.914a1 1 0 0 1 .293-.707l3.914-3.914A1 1 0 0 1 9.914 3H18 a1 1 0 0 1 1 1Z"/>
+            </svg>
+        </a></li>
+        
+          <!--[if lt IE 9]><em>Instagram</em><![endif]--></a></li>
+          
+          <li><a href="https://github.com/cjgayle1" target="_blank" class="icon github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+        
+        
+          <li><a href="https://www.linkedin.com/in/christopher-gayle/" target="_blank" class="icon linkedin" title="LinkedIn"><svg viewBox="0 0 512 512"><path d="M186.4 142.4c0 19-15.3 34.5-34.2 34.5 -18.9 0-34.2-15.4-34.2-34.5 0-19 15.3-34.5 34.2-34.5C171.1 107.9 186.4 123.4 186.4 142.4zM181.4 201.3h-57.8V388.1h57.8V201.3zM273.8 201.3h-55.4V388.1h55.4c0 0 0-69.3 0-98 0-26.3 12.1-41.9 35.2-41.9 21.3 0 31.5 15 31.5 41.9 0 26.9 0 98 0 98h57.5c0 0 0-68.2 0-118.3 0-50-28.3-74.2-68-74.2 -39.6 0-56.3 30.9-56.3 30.9v-25.2H273.8z"/></svg><!--[if lt IE 9]><
+        >LinkedIn</em><![endif]--></a></li>
+        
+        </ul>
+      </div>
+      <footer>
+        <p>This website was built in Visual Studio Code using HTML, CSS, and JS. It took me longer than I'd care to admit but it was a great learning experience! There are a variety of easter eggs planted throughout the website so see if you can find them all! I took inspiration from a variety of pre-existing portfolios and used some premade codepen designs to help loosely create some of my elements. A huge thank you to those who graciously made their ideas public and a list of credit can be found <span class="highlight"><a href="credits.html" target="_blank" class="default-link">here!</a></span></p>
+      </footer>
+    
+</div>
+
+
+
+  <script src="js/themes.js"></script>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H2HVWSN0D5"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absurd Trolley Problems 2</title>
+    <link rel="stylesheet" href="./css/trolly.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Patrick+Hand&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.3/firebase-firestore.js"></script>
+</head>
+<body>
+
+    <div class="game-container">
+        <h1>Absurd Trolley Problems 2</h1>
+        <div class="level-marker" id="level-marker"></div>
+        <div class="problem">
+            <img src="trolley_problem_1.png" alt="Trolley Problem">
+            <p id="problem-text">Oh no! A trolley is heading towards 5 people. You can pull the lever to divert it to the other track, killing 1 person instead. What do you do?</p>
+            <button id="pull-lever">Pull the lever</button>
+            <button id="do-nothing">Do nothing</button>
+        </div>
+        <div class="results">
+            <p id="results-text"></p>
+            <button id="next" style="display: none;">Next Problem</button>
+        </div>
+        <div id="navigation-arrows">
+            <button id="back-arrow">&larr;</button>
+            <button id="next-arrow">&rarr;</button>
+        </div>
+    </div>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyBTLJwHn5aFm2q5w-V3Xp5-9rXWCfC_amA",
+          authDomain: "trolley-voting.firebaseapp.com",
+          projectId: "trolley-voting",
+          storageBucket: "trolley-voting.appspot.com",
+          messagingSenderId: "1016424085441",
+          appId: "1:1016424085441:web:e058ad23fd4fcd5a79a140",
+          measurementId: "G-LYHBQWHK22"
+        };
+      
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+        const analytics = getAnalytics(app);
+      </script>
+    <script src="./js/trolly.js"></script>
+</body>
+</html>

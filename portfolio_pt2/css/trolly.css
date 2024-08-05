@@ -1,0 +1,169 @@
+body {
+    font-family: 'Patrick Hand', 'Gloria Hallelujah', cursive;
+    background-color: #fff;
+    text-align: center;
+    margin: 0;
+    margin-top: -20px;
+    padding: 0;
+}
+
+.game-container {
+    max-width: 950px;
+    margin: auto;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 1.5em;
+    margin-bottom: 0px;
+}
+
+.level-marker {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: -5px
+}
+
+.problem {
+    width: 100%;
+    text-align: center;
+    
+}
+
+.problem img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: -20px;
+}
+
+.problem p {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.75em;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 27px;
+    cursor: pointer;
+    font-family: 'Patrick Hand', cursive;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #000000;
+    color: #fff;
+    cursor: pointer;
+
+}
+
+.results {
+    margin-top: 0px;
+
+}
+
+.results p{
+    font-size: 25px;
+    font-weight: 200;
+    
+    /* outline: 2px solid #000000;
+    border-radius: 5px;  */
+}
+
+#navigation-arrows {
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+}
+#navigation-arrows :hover {
+    color: #000;
+}
+
+
+#back-arrow, #next-arrow {
+    background-color: transparent;
+    border: none;
+    font-size: 3em;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+#back-arrow {
+    margin-left: 20px;
+}
+
+#next-arrow {
+    margin-right: 20px;
+}
+
+#back-arrow :hover {
+    cursor: pointer;
+    color: #000;
+    font-size: 2.5em;
+}
+
+#next-arrow :hover {
+    cursor: pointer;
+    color: #000;
+    font-size: 2.5em;
+}
+
+
+
+
+.home-container {
+    max-width: 950px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro-text {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.intro-text a {
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px dashed #000;
+}
+
+.intro-text a:hover {
+    border-bottom: 1px solid #000;
+}
+
+.warning {
+    color: red;
+    font-weight: bold;
+}
+
+.changes {
+    font-family: 'Patrick Hand', cursive;
+    font-size: .8em;
+    margin-bottom: 20px;
+    text-align: left;
+    line-height: 1.5;
+}
+

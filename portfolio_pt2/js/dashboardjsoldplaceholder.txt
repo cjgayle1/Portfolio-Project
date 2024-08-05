@@ -1,0 +1,87 @@
+// Configure AWS SDK
+AWS.config.region = 'us-east-2'; 
+AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+    IdentityPoolId: 'us-east-2:a28e8752-3d1e-48eb-8e1c-ef99ca861ac9'
+});
+
+// Chart variable declared in the global scope
+var metricsChart;
+
+// Function to update the chart with new data
+function updateChart(labels, data) {
+    metricsChart.data.labels = labels;
+    metricsChart.data.datasets[0].data = data;
+    metricsChart.update();
+}
+
+// Function to fetch data from DynamoDB
+function fetchDynamoDBData() {
+    var docClient = new AWS.DynamoDB.DocumentClient();
+    var params = {
+        TableName: 'WesbiteMonitoring',
+        Limit: 10 // Adjust as necessary
+    };
+
+    docClient.scan(params, function(err, data) {
+        if (err) {
+            console.log(err);
+        } else {
+            // Assuming each item has 'DateTimeCheck' and 'MetricValue' attributes
+            var labels = data.Items.map(item => new Date(item.DateTimeCheck).toLocaleString());
+            var dataPoints = data.Items.map(item => item.MetricValue);
+            updateChart(labels, dataPoints);
+        }
+    });
+}
+
+// Function to fetch metrics from CloudWatch
+function fetchCloudWatchMetrics() {
+    var cloudWatch = new AWS.CloudWatch();
+    var params = {
+        // Fill in with the actual parameters for your metrics
+        Namespace: 'YourNamespace',
+        MetricName: 'YourMetric',
+        StartTime: new Date(Date.now() - 24 * 3600 * 1000).toISOString(),
+        EndTime: new Date().toISOString(),
+        Period: 300,
+        Statistics: ['Average']
+    };
+
+    cloudWatch.getMetricStatistics(params, function(err, data) {
+        if (err) {
+            console.log(err);
+        } else {
+            // Process and use this data to update the chart
+            // You'll need to extract labels and data points as per your metric's response
+        }
+    });
+}
+
+// Event listener for DOMContentLoaded to initialize the chart
+document.addEventListener('DOMContentLoaded', function () {
+    var ctx = document.getElementById('metricsChart').getContext('2d');
+    metricsChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: [], // Placeholder for labels updated dynamically
+            datasets: [{
+                label: 'My Metric',
+                data: [], // Placeholder for data updated dynamically
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgba(255, 99, 132, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    // Call AWS fetch functions after chart initialization
+    fetchDynamoDBData();
+    // fetchCloudWatchMetrics(); // Uncomment if you have CloudWatch data ready to fetch
+});

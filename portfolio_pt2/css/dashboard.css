@@ -1,0 +1,588 @@
+:root {
+    --primary-bg-color: #1e1e1e; 
+    --secondary-bg-color: #141414; 
+    --primary-text-color: #fff; 
+    --secondary-text-color: #B6C0CE; 
+    --accent-color: #855CFF; 
+
+}
+.dm-serif-display-regular {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.dm-serif-display-regular-italic {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.dm-sans-heading {
+    font-family: 'DM Sans', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700; 
+    font-style: normal;
+}
+
+.dm-sans-extralight {
+    font-family: 'DM Sans', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200; 
+    font-style: normal;
+}
+
+.dm-sans-light {
+    font-family: 'DM Sans', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300; 
+    font-style: normal;
+}
+
+.dm-sans-regular {
+    font-family: 'DM Sans', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400; 
+    font-style: normal;
+}
+
+.dm-sans-black {
+    font-family: 'DM Sans', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900; 
+    font-style: normal;
+}
+
+p {
+    font-family: 'DM Sans', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400; 
+    font-style: normal;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+
+/* Typography */
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--primary-text-color);
+    background-color: var(--primary-bg-color);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-text-color);
+    margin-bottom: 0.5em;
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  h1 { font-size: 2em; }
+  h2 { font-size: 1.5em; }
+  /* ... Other heading sizes */
+
+/* website monitoring widget */
+
+#navbar {
+    background-color: var(--primary-bg-color); 
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    transition: top 0.3s;
+    
+    
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+    padding: 0 20px;
+    z-index: 1000;
+  }
+
+  #navbar-logo {
+    display: block; 
+    padding: 5px 0;
+}
+ 
+  #navbar-links a {
+    /* float: right; */
+    /* display: block; */
+    color: var(--primary-text-color);
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+  }
+  #navbar-links { 
+    display: flex; 
+    align-items: center; 
+    margin-right: 3rem;
+}
+  
+  #navbar a:hover {
+    color: var(--link-hover-color);
+  }
+
+
+#top-box {
+    position: relative;
+    margin-bottom: 10px;
+}  
+  
+  #info-button {
+    background-color: var(--accent-color);
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    /* border-radius: 10%; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  }
+  
+  #info-button:hover {
+    background-color: #c796ff;
+    cursor: pointer;
+  }
+  
+  #popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    z-index: 1000;
+    width: 80%;
+    max-width: 1200px;
+    display: none;
+  }
+  
+  #popup-content {
+    position: relative;
+  }
+  
+  #close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  #popup-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+
+
+/* Additional base styles may be needed, make sure to integrate with your existing CSS properly */
+
+
+section {
+    display: block;
+    padding: 3em 0 0;
+}
+
+.dashboard-headers {
+    margin-top: 6rem;
+    margin-left: 2rem;
+    margin-bottom: .5rem;
+}
+
+.info-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 2em;
+    padding: 1em; 
+    margin: auto;
+}
+
+
+.info-box {
+    background: var(--secondary-bg-color);
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 3em;
+    border-radius: 20px;
+}
+
+/* Med screens - 2 per row */
+@media (min-width: 600px) {
+    .info-boxes {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
+}
+
+/* larger screens - 4 per row */
+@media (min-width: 1200px) {
+    .info-boxes {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    }
+}
+
+.info-box .box-icon svg {
+    display: block;
+    width: 48px;
+    height: 48px;
+}
+
+.info-box .box-icon svg path,
+.info-box .box-icon svg circle {
+    fill: var(--accent-color);
+}
+
+.info-box .box-content {
+    padding-left: 1.25em;
+    white-space: nowrap;
+    color: var(--secondary-text-color);
+    font-family: 'DM Sans', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400; 
+    font-style: normal;
+}
+
+.info-box .box-content .big {
+    display: block;
+    font-size: 2em;
+    line-height: 150%;
+    color: var(--primary-text-color);
+}
+
+.info-box.active .box-icon svg circle,
+.info-box.active .box-icon svg path {
+    fill: var(--accent-color);
+}
+
+/* trying to make it so that this will move to the right 20% across the screen idk why its not working */
+.time-period-dropdown {
+    margin-left: 20%;
+}
+
+
+.dashboard-container {
+    display: flex;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    justify-content: space-around;
+    width: 100%; 
+    /* margin: auto; */
+    gap: 20px;
+}
+.chart-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px; 
+    padding: 20px;
+}
+
+
+.chart-item {
+    flex: 1 1 auto;
+    background-color: var(--primary-bg-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensure contents do not overflow */
+    position: relative; /* Make the container relative for absolute positioning */
+}
+
+.chart-item svg {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Ensure the SVG fits within its container */
+
+}
+
+
+.graph-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1em; /* Spacing between rows */
+}
+
+.graph-box {
+    background: var(--secondary-bg-color); /* Replace with your desired color */
+    border-radius: 20px;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5em; /* Space out the widgets */
+    max-width: 45%;
+}
+
+.full-width {
+    width: 100%; /* Full width of the container */
+    /* You might want to set a min-height here as well */
+}
+
+.half-width {
+    width: calc(50% - 1em); /* Half width - margin */
+    /* You might want to set a min-height here as well */
+}
+
+/* Add responsive behavior */
+@media (max-width: 768px) {
+  .graph-row {
+    flex-direction: column;
+  }
+
+  .half-width {
+    width: 100%; /* Stack on smaller screens */
+  }
+}
+
+#world-map, #line-graph, #browser-pie-chart, #os-donut-chart, #top-performing-dates, #event-bar-graph {
+    height: 500px;
+    max-width: 50%;
+    padding: 50px;
+    background-color: var(--secondary-bg-color);
+    font-family: 'DM Sans', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400; 
+    font-style: normal;
+    /* margin: 10px; */
+
+}
+
+#world-map {
+    max-width: 50%;
+    height: 500px;
+    background-color: var(--secondary-bg-color);
+    margin: 20px 0;
+    border-radius: 10px;
+    padding: 20px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+}
+
+#event-bar-graph {
+    height: 500px;
+    max-width: 30%;   
+    background-color: var(--secondary-bg-color);
+    margin: 20px 0;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width:100%;
+    /* height: 100%; */
+}
+
+
+#top-performing-dates {
+    background-color: var(--secondary-bg-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 20px 0;
+    height: 500px;
+}
+
+.top-dates-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    overflow-y: auto;
+    
+}
+
+.top-dates-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #444;
+    font-family: 'DM Sans', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400; 
+    font-style: normal;
+}
+
+.top-dates-item .date {
+    flex: 1;
+}
+
+.top-dates-item .event-count,
+.top-dates-item .screen-page-views {
+    flex: 1;
+    text-align: right;
+}
+
+.top-dates-item:last-child {
+    border-bottom: none;
+}
+
+
+
+.metric-summary-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--primary-bg-color);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.metric-summary-card {
+    background-color: var(--secondary-bg-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.metric-summary-card h3 {
+    margin-bottom: 10px;
+    color: var(--primary-text-color);
+}
+
+.metric-summary-card .metric-value {
+    font-size: 2em;
+    color: var(--accent-color);
+}
+
+.widget-title {
+    font-size: 1.5em;
+    color: var(--primary-text-color);
+    margin: 20px 0 10px; 
+    text-align: center;
+}
+
+
+
+/* Graph Containers */
+/* .graph-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 1em; 
+    padding: 1em;
+    margin: auto;
+}
+
+.graph-box {
+    background: var(--secondary-bg-color);
+    border-radius: 20px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1em; 
+} */
+
+
+
+/* Full-width graph container (for line graphs, etc.) */
+/* .full-width-graph {
+    grid-column: span 2; 
+    min-height: 300px; 
+} */
+
+/* Specific styles for half-width graphs */
+/* .half-width-graph {
+    grid-column: span 1; 
+    min-height: 300px; 
+}
+
+@media (min-width: 900px) {
+    .graph-boxes {
+        grid-template-columns: repeat(4, 1fr); 
+    }
+    
+    .full-width-graph {
+        grid-column: span 4; 
+    }
+    
+    .half-width-graph {
+        grid-column: span 2; 
+    }
+} */
+
+/* Add styles for the line chart here */
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2px;
+}
+
+#tooltip {
+    position: absolute;
+    text-align: left;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    font: 12px sans-serif;
+    background: white;
+    border: solid 1px #aaa;
+    pointer-events: none; 
+    opacity: 0.9;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.dashboard-widgets {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .widget {
+    background: var(--secondary-bg-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 10px;
+    padding: 20px;
+  }
+  
+

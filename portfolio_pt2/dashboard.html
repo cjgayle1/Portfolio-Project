@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H2HVWSN0D5"></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+  <script src="https://sdk.amazonaws.com/js/aws-sdk-2.800.0.min.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+
+
+</head>
+<body>
+
+    <div id="navbar">
+        <a href="/" id="navbar-logo">
+            <img src="./assets/profile_smile.jpeg" alt="Logo" style="height: 50px;"> 
+        </a>
+        <nav id="navbar-links">
+            <a href="/index.html">About Me</a>
+            <a href="/index.html#experience">Experiences</a>
+            <a href="/index.html#projects">Projects</a>
+            <a href="/index.html#contact">Connect</a>
+        </nav>
+    </div>
+    <!-- Dashboard Widgets -->
+    <div class="dashboard-headers">
+        <h1 >Welcome to my portfolio dashboard!</h1>
+        <div id="top-box">
+            <button id="info-button">How It Works</button>
+        </div>
+        
+        <div id="popup" class="hidden">
+            <div id="popup-content">
+                <span id="close-popup">&times;</span>
+                <h2 style="color: black;">How It Works</h2>
+                <p>This dashboard collects metrics from this website, providing insights into user behavior, traffic sources, and other key metrics. The process begins when a user interacts with the website. These interactions are collected as data by Google Analytics. To ensure the data is stored and accessible for analysis, two AWS Lambda functions are used.
+
+                    First, the Ping Website Lambda Function, which periodically checks the website to ensure it's online and functioning correctly and sends the results in a JSON to DynamoDB. 
+                    Second, the Google Analytics to DynamoDB Lambda Function, which pulls the data from Google Analytics and stores it in another DynamoDB table also in JSON format. Both functions are scheduled by an Amazon EventBridge Scheduler to run on a daily basis. When a user accesses the dashboard, the necessary data is retrieved from DynamoDB using AWS SDKs. This data is then visualized on the dashboard using D3.js. This integrated system ensures a seamless and efficient data flow from user interactions to data visualization, allowing for real-time monitoring and analysis of website performance.</p>
+                <img src="./assets/dashboard.png" alt="Diagram explaining the process" id="popup-image">
+            </div>
+        </div>        
+        <h3>Last update: </h3>
+    </div>
+    <section class="info-boxes">
+        <div class="info-box">
+            <div class="box-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21 20V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1zm-2-1H5V5h14v14z"/><path d="M10.381 12.309l3.172 1.586a1 1 0 0 0 1.305-.38l3-5-1.715-1.029-2.523 4.206-3.172-1.586a1.002 1.002 0 0 0-1.305.38l-3 5 1.715 1.029 2.523-4.206z"/></svg>
+            </div>
+            
+            <div class="box-content">
+                <span id="website-status" class="big">Loading...</span>
+                Website Status
+            </div>
+        </div>
+        
+        <div class="info-box">
+            <div class="box-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 10H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V11a1 1 0 0 0-1-1zm-1 10H5v-8h14v8zM5 6h14v2H5zM7 2h10v2H7z"/></svg>
+            </div>
+            
+            <div class="box-content">
+                <span id="check-time" class="big">Loading...</span>
+                Last Ping
+            </div>
+        </div>
+        
+        <div class="info-box active">
+            <div class="box-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3,21c0,0.553,0.448,1,1,1h16c0.553,0,1-0.447,1-1v-1c0-3.714-2.261-6.907-5.478-8.281C16.729,10.709,17.5,9.193,17.5,7.5 C17.5,4.468,15.032,2,12,2C8.967,2,6.5,4.468,6.5,7.5c0,1.693,0.771,3.209,1.978,4.219C5.261,13.093,3,16.287,3,20V21z M8.5,7.5 C8.5,5.57,10.07,4,12,4s3.5,1.57,3.5,3.5S13.93,11,12,11S8.5,9.43,8.5,7.5z M12,13c3.859,0,7,3.141,7,7H5C5,16.141,8.14,13,12,13z"/></svg>
+            </div>
+            
+            <div class="box-content">
+                <span id="response-time" class="big">Loading...</span>
+                Response Time
+            </div>
+        </div>
+        
+        <div class="info-box">
+            <div class="box-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 3C6.486 3 2 6.364 2 10.5c0 2.742 1.982 5.354 5 6.678V21a.999.999 0 0 0 1.707.707l3.714-3.714C17.74 17.827 22 14.529 22 10.5 22 6.364 17.514 3 12 3zm0 13a.996.996 0 0 0-.707.293L9 18.586V16.5a1 1 0 0 0-.663-.941C5.743 14.629 4 12.596 4 10.5 4 7.468 7.589 5 12 5s8 2.468 8 5.5-3.589 5.5-8 5.5z"/></svg>
+            </div>
+            
+            <div class="box-content">
+                <span id="status-code" class="big">Loading...</span>
+                Return Code
+            </div>
+        </div>
+    </section>
+    <div>
+        <select class="time-period-dropdown" id="timePeriodDropdown" onchange="updateChart()"></select>
+    </div>
+    <div class="chart-container">
+        <div id="line-graph" class="chart-item"></div>
+        <div id="browser-pie-chart" class="chart-item"></div>
+        <div id="os-donut-chart" class="chart-item"></div>
+        <div id="event-bar-graph" class="chart-item"></div>
+        <div id="world-map" class="chart-item"></div>
+
+        <div id="top-performing-dates" class="widget">
+            <h2 class="widget-title">Top 5 Days</h2>
+
+        </div>
+
+
+
+    </div>
+
+    <div class="metric-summary-container">
+        <div class="metric-summary-card" id="total-active-users">
+            <h3>Total Active Users</h3>
+            <span class="metric-value">Loading...</span>
+        </div>
+        <div class="metric-summary-card" id="total-event-count">
+            <h3>Total Event Count</h3>
+            <span class="metric-value">Loading...</span>
+        </div>
+        <div class="metric-summary-card" id="total-screen-page-views">
+            <h3>Total Screen Page Views</h3>
+            <span class="metric-value">Loading...</span>
+        </div>
+        <div class="metric-summary-card" id="total-sessions">
+            <h3>Total Sessions</h3>
+            <span class="metric-value">Loading...</span>
+        </div>
+    </div>
+
+
+    <div id="tooltip"></div>
+    
+    <!-- <section class="dashboard-container"> -->
+        <!-- <select id="timePeriodDropdown" onchange="updateChart()">
+        </select> -->
+        <!-- <div class="graph-row"> -->
+
+          <!-- <div class="graph-box full-width"> -->
+            
+            <!-- <div id="line-graph"> -->
+                
+            <!-- </div> -->
+
+            <!-- <div id="line-graph" class="graph-box full-width-graph"></div> -->
+            <!-- <div id="tooltip" style="position: absolute; visibility: hidden; pointer-events: none; padding: 10px; background: white; border: 1px solid #ccc;"></div> -->
+
+            <!-- Your line graph will be injected here -->
+          </div>
+          <!-- <div id="line-graph"></div> -->
+          <!-- <div id="line-graph" class="graph-box full-width-graph"></div> -->
+          <!-- <div id="tooltip" style="position: absolute; visibility: hidden; pointer-events: none; padding: 10px; background: white; border: 1px solid #ccc;"></div> -->
+
+          <!-- <div id="browser-pie-chart"></div> -->
+
+          <!-- <div id="os-donut-chart"></div> -->
+
+          <!-- Your line graph will be injected here -->
+        <!-- </div> -->
+        <!-- </div> -->
+
+
+
+  <script type="module" src="js/aws-config.js"></script>
+  <script type="module" src="js/GA.js"></script>
+  <script type="module" src="js/websitemonitoring.js"></script>
+  <script type="module" src="js/dashboard.js"></script>
+  
+</body>
+</html>
