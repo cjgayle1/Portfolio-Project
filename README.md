@@ -1,8 +1,8 @@
 # Portfolio-Project
- Codebase for my portfolio
 
 
-This is my portfolio website. It took me a good amount of time to create and it was a lot of fun.
+
+This is the code for my portfolio portfolio website. It took me a good amount of time to create and it was a lot of fun.
 This is the link to check out the live site:
 https://christopher-gayle.com/
 
